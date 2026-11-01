@@ -1,0 +1,223 @@
+﻿/* Margen general del contenido */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+    .body-content {
+        padding: 0;
+    }
+}
+
+/* Paleta: grafito, aluminio y un solo acento azul petróleo */
+:root {
+    --grafito: #23282e;
+    --aluminio: #eceeef;
+    --papel: #ffffff;
+    --acero: #5f6870;
+    --linea: #d3d7da;
+    --petroleo: #1d5470;
+    --petroleo-oscuro: #163f54;
+}
+
+body {
+    font-family: 'Archivo', system-ui, sans-serif;
+    background-color: var(--aluminio);
+    color: var(--grafito);
+}
+
+/* Títulos en versión condensada, como el packaging de hardware */
+h1, h2, h3 {
+    font-stretch: 75%;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+}
+
+/* Menú y logo */
+.bg-marca {
+    background-color: var(--grafito) !important;
+}
+
+.marca-blow {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-stretch: 75%;
+    font-weight: 700;
+    font-size: 1.7rem;
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+/* Botón principal: el único lugar con color de acento */
+.btn-marca {
+    background-color: var(--petroleo);
+    border-color: var(--petroleo);
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+    .btn-marca:hover,
+    .btn-marca:focus {
+        background-color: var(--petroleo-oscuro);
+        border-color: var(--petroleo-oscuro);
+        color: #fff;
+    }
+
+/* Portada */
+.portada {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 3.5rem 0 3rem;
+}
+
+    .portada h1 {
+        font-size: clamp(2.4rem, 5vw, 3.6rem);
+        max-width: 13ch;
+        margin-bottom: 1rem;
+    }
+
+    .portada .bajada {
+        color: var(--acero);
+        font-size: 1.125rem;
+        line-height: 1.55;
+        max-width: 42ch;
+        margin-bottom: 1.75rem;
+    }
+
+@media (max-width: 767px) {
+    .portada {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+}
+
+/* Ficha técnica del producto destacado */
+.ficha {
+    background: var(--papel);
+    border: 1px solid var(--linea);
+    border-radius: 6px;
+    padding: 1.75rem;
+}
+
+.ficha-nombre {
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+.ficha-uso {
+    color: var(--acero);
+    margin: 0.25rem 0 1.25rem;
+}
+
+.ficha dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1.5rem;
+    margin: 0 0 1.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--linea);
+    border-bottom: 1px solid var(--linea);
+}
+
+.ficha dt {
+    color: var(--acero);
+    font-weight: 400;
+}
+
+.ficha dd {
+    margin: 0;
+    font-weight: 500;
+}
+
+.ficha-precio {
+    font-stretch: 75%;
+    font-weight: 700;
+    font-size: 2.4rem;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+}
+
+.ficha-cuotas {
+    color: var(--acero);
+    margin: 0.35rem 0 1.25rem;
+}
+
+/* Ventajas de la tienda */
+.ventajas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0 3rem;
+    border-top: 1px solid var(--linea);
+}
+
+    .ventajas h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .ventajas p {
+        color: var(--acero);
+        margin: 0;
+        max-width: 34ch;
+    }
+
+@media (max-width: 767px) {
+    .ventajas {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+}
+
+/* Tabla de productos */
+.tabla-productos {
+    background: var(--papel);
+    border: 1px solid var(--linea);
+}
+
+    .tabla-productos th {
+        color: var(--grafito);
+        border-bottom: 2px solid var(--grafito) !important;
+        font-weight: 600;
+        padding: 0.75rem 1rem !important;
+    }
+
+        .tabla-productos th a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+            .tabla-productos th a:hover {
+                text-decoration: underline;
+            }
+
+    .tabla-productos td {
+        padding: 0.75rem 1rem !important;
+        vertical-align: middle;
+    }
+
+.precio {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+/* Formulario de pedido */
+.card {
+    border-radius: 6px;
+}
+
+/* Pie de página */
+.pie {
+    color: var(--acero);
+    font-size: 0.9rem;
+    padding: 1.5rem 0 2rem;
+}

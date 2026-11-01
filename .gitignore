@@ -1,0 +1,9 @@
+# Carpetas que Visual Studio genera solo
+.vs/
+bin/
+obj/
+packages/
+
+# Configuración personal de cada usuario
+*.user
+*.suo
